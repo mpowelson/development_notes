@@ -14,9 +14,10 @@ The author of the repo provides a tool called labelme_json_to_dataset. However t
 #!/bin/bash
 
 #This script converts a directory of json files created by labelme to directories of labels and overlays
-
+To use put the json files and images in a ./labels_json directory and call this bash script. The results will be in labels_viz and labels directory
 # Create directories we will use
 mkdir -p .temp
+mkdir -p labels
 mkdir -p labels_viz
 mkdir -p labels_json
 
