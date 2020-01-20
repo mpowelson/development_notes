@@ -1,7 +1,26 @@
 # Install Clang and GCC
 
+## Install
 These scripts are used to install Clang and GCC on Ubuntu 18.04. They were modified from https://gist.github.com/bhaskarvk/78a80d9b5d308c84ba43b4a4e599a439
 
+First setup Clang
+```
+sudo bash llvm-clang-alternatives.sh
+```
+
+Next setup GCC
+```
+sudo bash gcc-alternatives.sh
+```
+
+Next setup switch between GCC and Clang
+```
+sudo bash cc-alternatives
+```
+
+Note: If you run into errors like `x can't be slave of y: it is a master alternative` then you can remove it using `sudo update-alternatives --remove-all x`. Before you do that you probably want to check and make sure it doesn't have more than one alternative. You can do that by trying to switch it like normal `sudo update-alternatives --config x`.
+
+## Usage
 Switch between Clang and GCC with 
 ```
 sudo update-alternatives --config cc
